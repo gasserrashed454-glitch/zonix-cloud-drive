@@ -161,29 +161,7 @@ const Admin = () => (
             </TabsContent>
 
             <TabsContent value="azure" className="mt-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Link2 className="h-5 w-5" /> Azure Storage Integration
-                  </CardTitle>
-                  <CardDescription>Connect your Azure Blob Storage account to store all user data</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <Label>Azure Storage Account Name</Label>
-                    <Input placeholder="mystorageaccount" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Connection String</Label>
-                    <Input type="password" placeholder="DefaultEndpointsProtocol=https;AccountName=…" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Container Name</Label>
-                    <Input placeholder="zonix-cloud-files" />
-                  </div>
-                  <Button>Connect Azure Storage</Button>
-                </CardContent>
-              </Card>
+              <AzureStorageSettings />
             </TabsContent>
           </Tabs>
         </main>
