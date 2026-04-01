@@ -2,12 +2,11 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Users, Activity, HardDrive, Shield, Globe, Settings, Link2 } from "lucide-react";
+import { Users, Activity, HardDrive, Shield, Globe, Settings } from "lucide-react";
+import AzureStorageSettings from "@/components/AzureStorageSettings";
 import DriveSidebar from "@/components/DriveSidebar";
 import DriveHeader from "@/components/DriveHeader";
 
@@ -162,29 +161,7 @@ const Admin = () => (
             </TabsContent>
 
             <TabsContent value="azure" className="mt-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Link2 className="h-5 w-5" /> Azure Storage Integration
-                  </CardTitle>
-                  <CardDescription>Connect your Azure Blob Storage account to store all user data</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <Label>Azure Storage Account Name</Label>
-                    <Input placeholder="mystorageaccount" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Connection String</Label>
-                    <Input type="password" placeholder="DefaultEndpointsProtocol=https;AccountName=…" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Container Name</Label>
-                    <Input placeholder="zonix-cloud-files" />
-                  </div>
-                  <Button>Connect Azure Storage</Button>
-                </CardContent>
-              </Card>
+              <AzureStorageSettings />
             </TabsContent>
           </Tabs>
         </main>
